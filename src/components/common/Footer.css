@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300&display=swap');
+footer{
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    background: #3044a5;
+    font-family: 'Oxygen', sans-serif;
+}
+footer .foot-container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-gap:20px;
+    /* border-radius: 10px; */
+}
+footer .foot-container .sec >h2{
+    position: relative;
+    color: white;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+footer .foot-container .sec >h2::before{
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0px;
+    width: 50px;
+    height: 2px;
+    background: white;
+}
+footer .foot-container .sec>p{
+    color: white;
+}
+.sci{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,50px);
+    grid-gap:10px;
+    border-radius: 10px;
+}
+.sci .sci-items{
+    list-style: none;
+}
+.sci .sci-items .sci-link{
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    background: #3e56cb;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.sci .sci-items .sci-link:hover{
+    background: #638fe6;
+}
+.sci .sci-items .sci-link .fab,.sci .sci-items .sci-link .far{
+    color: white;
+    font-size: 25px;
+}
+
+.quickLinks
+{
+    position: relative;
+}
+.quickLinks .link-items{
+    list-style: none;
+    color: white;
+    margin-bottom: 10px;
+    /* display: inline-block; */
+}
+.info{
+    position: relative;
+}
+.info .info-items{
+    list-style: none;
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    margin-bottom: 16px;
+}
+.info .info-items >span:nth-child(1){
+    color: white;
+    font-size: 20px;
+}
+.info .info-items >span:nth-child(2){
+    color: white;
+}
+.copyright{
+    width: 100%;
+    background: #1f3389;
+    padding: 8px 10px;
+    text-align: center;
+    color: white;
+}
+@media screen and (max-width: 991px) {
+footer{
+    padding: 40px;
+}
+footer .foot-container{
+   
+    grid-template-columns: repeat(2,1fr);
+    
+}
+
+}
+@media screen and (max-width: 768px){
+    footer .foot-container{
+   
+        grid-template-columns: repeat(1,1fr);
+        
+    }
+}
