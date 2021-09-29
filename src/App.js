@@ -6,7 +6,7 @@ import Map from "./components/pages/Map";
 import GetGuide from "./components/pages/GetGuide";
 import Blogs from "./components/pages/Blogs";
 import './App.css'
-import Footer from "./components/common/Footer";
+// import Footer from "./components/common/Footer";
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
           <Route path='/blogs' component={Blogs} />
       </Switch>
 
-      <Footer/>
+      {/* <Footer/> */}
     </Router>
       
     </>

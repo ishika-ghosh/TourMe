@@ -30,45 +30,51 @@ function Crads() {
                 <div className='Card-container'>
                     <div className="card">
                         <div className="imgbox">
-                            <img src={img1} alt=''/>
+                            <img src={img1} alt='' />
                         </div>
                         <div className="card-content">
                             <h2>What do we do for you</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ad laboriosam unde adipisci neque fuga eligendi magni, iste, consequuntur atque animi. Voluptas ea expedita tempore explicabo esse quod quo quasi.</p>
+                            <p>Our team FourWeb is designing a Travelling Website which aims on providing travellers an enjoyable and happy journey!
+                                With TourMe you can get a better idea of the place you want to visit.
+                                You get an insight about Hotels,Restaurants, Tourist Attractions and what not along with the Budget.</p>
                         </div>
                     </div>
                     <div className="card">
                         <div className="imgbox">
-                            <img src={img2} alt=''/>
+                            <img src={img2} alt='' />
                         </div>
                         <div className="card-content">
-                            <h2>What do we do for you</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ad laboriosam unde adipisci neque fuga eligendi magni, iste, consequuntur atque animi. Voluptas ea expedita tempore explicabo esse quod quo quasi.</p>
+                            <h2>WHY CHOOSE US:
+</h2>
+                            <p>*Budget Friendly Tour
+*Amazing Destinations
+*One-stop destination for all your needs.
+*Thriller Experience</p>
                         </div>
                     </div>
                     <div className="card">
                         <div className="imgbox">
-                            <img src={img3} className='image3' alt=''/>
+                            <img src={img3} className='image3' alt='' />
                         </div>
                         <div className="card-content">
-                            <h2>What do we do for you</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos ad laboriosam unde adipisci neque fuga eligendi magni, iste, consequuntur atque animi. Voluptas ea expedita tempore explicabo esse quod quo quasi.</p>
+                            <h2>Live your Life</h2>
+                            <p> “Travel is  fatal to prejudice, bigotry, and narrow mindedness, and many of our people need it sorely on these accounts.” ~ Mark Twain</p>
                         </div>
                     </div>
 
                 </div>
-                
+
+
+            </div>
+            <div className="bigbo">
+                <div className="bigbox">
+                    <img src={bigbo} alt='' />
+                    <div className="parabox">
+                        <h1>TRAVEL</h1>
+                        <p>“Do not follow where the path may lead. Go instead where there is no path and leave a trail” – Ralph Waldo Emerson </p>
+                    </div>
 
                 </div>
-                <div className="bigbo">
-                    <div className="bigbox">
-                        <img src={bigbo} alt=''/>
-                        <div className="parabox">
-                        <h1>Hello World</h1>
-                        <p>Lorem ipsum, dolor sit amet Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora ipsum a fuga animi repudiandae </p>
-                        </div>
-                        
-                    </div>
             </div>
 
         </div>

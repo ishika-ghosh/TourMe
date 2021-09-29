@@ -11,7 +11,7 @@ function HeroSection() {
             <p>What are you waiting for?</p>
             <div className="hero-btns">
                 <button className='btn--primary'><Link to='/blogs' className='btn-link'>Get Started<i className="fas fa-suitcase-rolling"/></Link></button>
-                <button className='btn--primary'><Link to='/' className='btn-link'>Explore<i className="far fa-snowflake"/></Link></button>
+                <button className='btn--primary'><Link to='/map' className='btn-link'>Explore<i className="far fa-snowflake"/></Link></button>
             </div>
 
 

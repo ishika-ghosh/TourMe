@@ -11,9 +11,9 @@ function Footer() {
                 <div className="foot-container">
                     <div className="sec abouts">
                         <h2>About Us</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Dolorum deserunt officiis aliquid omnis sint reprehenderit ratione accusantium velit mollitia ipsa?
-                            Placeat, aliquam fuga. Sunt commodi ullam obcaecati natus harum cumque.</p>
+                        <p>Our team FourWeb is designing a Travelling Website which aims on providing travellers an enjoyable and happy journey!
+                                With TourMe you can get a better idea of the place you want to visit.
+                                You get an insight about Hotels,Restaurants, Tourist Attractions and what not along with the Budget.</p>
                         <ul className="sci">
                             <li className="sci-items"><Link to='/' className='sci-link'><i className="fab fa-facebook"/></Link></li>
                             <li className="sci-items"><Link to='/' className='sci-link'><i className="fab fa-twitter"/></Link></li>
@@ -62,14 +62,16 @@ function Footer() {
                         <ul className="info">
                             <li className='info-items'>
                                 <span><i className="fas fa-map-marker-alt"/></span>
-                                <span>647 Linda Street<br />
-                                    Phoneixville,PA 19450,<br />USA
+                                <span>129/5 RG Nagar Road<br />
+                                    HindMotar,Howrah<br />India
+
+
                                 </span>
                             </li>
                             <li className='info-items'>
                                 <span><i className="fas fa-phone-alt"/></span>
-                                <span>647 Linda Street<br />
-                                    Phoneixville,PA 19450,<br />USA
+                                <span>+91 8910631623<br />
+                                   
                                 </span>
                             </li>
                         </ul>
@@ -79,7 +81,7 @@ function Footer() {
 
             </footer>
             <div className="copyright">
-                <p>Copyright © 2021 webFour.All rights are reserved</p>
+                <p>Copyright © 2021 FOURWEB.All rights are reserved</p>
             </div>
         </div>
     )
