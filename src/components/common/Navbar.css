@@ -128,7 +128,7 @@
         position: absolute;
         top: 0px;
         left: 0px;
-        transform: translate(25%,25%);
+        transform: translate(25%,0%);
     }
     .menu-icons{
         display: block;
@@ -139,6 +139,9 @@
         cursor: pointer;
     }
     .fa-bars{
+        position: relative;
+        right: 12px;
+        top: 6px;
         color: white;
     }
     .fa-times{

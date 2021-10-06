@@ -1,9 +1,10 @@
 import React from 'react'
+import Registration from '../common/Registration'
 
 function GetGuide() {
     return (
         <div>
-            <h1>Guides</h1>
+            <Registration/>
         </div>
     )
 }

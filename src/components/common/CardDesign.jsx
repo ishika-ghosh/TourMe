@@ -33,10 +33,10 @@ function CardDesign({place}) {
                 {place.ranking}
             </Typography>
         </Box>
-        {place.address && 
+        {place.address_obj && 
         (<Typography gutterBottom variant="body2" color="textSecondary">
             <LocationOnIcon />
-            {place.address}
+            {place.address_obj.city},{place.address_obj.street1},{place.address_obj.street2},{place.address_obj.postalcode},{place.address_obj.country}
         </Typography>)
         }
       </CardContent>

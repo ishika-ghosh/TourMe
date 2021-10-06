@@ -30,7 +30,7 @@ function Navbar() {
                             <Link to='/map' className='nav-links' onClick={HideMobileMenu}>Map</Link>
                         </li>
                         <li className="nav-items">
-                        <a href='https://am-here.github.io/forms.github.io/' target='_blank' onClick={HideMobileMenu} className='nav-links'>Get Guides</a>
+                        <Link to='/getGuide' className='nav-links' onClick={HideMobileMenu}>Get Guide</Link>
                         </li>
                         <li className="nav-items">
                             {/* <Link  className='nav-links' onClick={HideMobileMenu} onClick={window.open('https://am-here.github.io/blogs.github.io/','__blank')}>Blogs</Link> */}

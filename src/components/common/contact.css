@@ -1,0 +1,142 @@
+.contact{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0d192e;
+    opacity: 0.9;
+    
+}
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    margin: 20px;
+    height: 600px;
+    background-color: #0a254d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container .formbox{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container .formbox form{
+    position: relative;
+    width: 100%;
+    padding: 0px 0px 0px 75px;
+}
+.container .formbox form h2{
+    color: white;
+    font-weight: 500;
+    font-size: 2em;
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+}
+.container .formbox form .input-box{
+    position: relative;
+    margin-bottom: 40px;
+}
+.container .formbox form .input-box:last-child{
+    margin-bottom: 0px;
+}
+.container .formbox form .input-box input, .container .formbox form .input-box textarea{
+    position: relative;
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    color: white;
+    padding-bottom: 10px;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-weight: 300;
+    border-bottom: 2px solid rgba(255,255,255,0.5);
+    resize: none;
+}
+.container .formbox form .input-box textarea{
+    height: 100px;
+}
+.container .formbox form .input-box input[type="submit"]{
+    background: white;
+    padding: 8px 20px;
+    margin-top: -10px;
+    background: #ff5064;
+    color: white;
+    font-weight: 400;
+    font-size: 18px;
+    border: none;
+    letter-spacing: 4px;
+}
+.container .formbox form .input-box input[type="submit"]:focus{
+    background: #1bfaad;
+    color: #111;
+}
+.container .formbox form .input-box span{
+    position: absolute;
+    left: 0px;
+    font-size: 16px;
+    font-weight: 300;
+    display: inline-block;
+    pointer-events: none;
+    letter-spacing: 1px;
+    color: rgba(255,255,255,0.8);
+    transition: all 0.5s;
+}
+.container .formbox form .input-box input:focus~span,
+ .container .formbox form .input-box textarea:focus~span,
+ .container .formbox form .input-box input:valid~span,
+  .container .formbox form .input-box textarea:valid~span{
+      transform: translateY(-24px);
+      color: #1bfaad;
+      font-size: 14px;
+  }
+  .container .formbox form .input-box input:focus,
+ .container .formbox form .input-box textarea:focus,
+ .container .formbox form .input-box input:valid,
+  .container .formbox form .input-box textarea:valid{
+      border-bottom-color:white ;
+  }
+
+.imagebox{
+    position: relative;
+    height: 100%;
+    width: 50%;
+    overflow: hidden;
+}
+.imagebox:before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: #ff5046;
+    height: 100% ;
+    width: 100%;
+    transform-origin: bottom;
+    transform: skew(-25deg) translateX(10%);
+}  
+.imagebox img{
+    position: absolute;   
+    
+    bottom: 0px;
+    max-height: 95%;
+}
+@media(max-width: 900px){
+    .container .formbox{
+        width: 100%;
+        padding: 0px  50px;
+    }
+    .container .imagebox{
+        display: none;
+    }
+    .container .formbox form{
+        position: relative;
+        width: 100%;
+        max-width: 500px;
+        padding: 0px;
+    }
+}

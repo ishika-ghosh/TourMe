@@ -22,42 +22,22 @@ function Footer() {
                         </ul>
                     </div>
                     <div className="sec quickLinks">
-                        {/* <h2>Quick Links</h2>
-                        <ul>
-                            <li className="link-items">About Us</li>
-                            <li className="link-items">FAQ</li>
-                            <li className="link-items">Terms and Conditions</li>
-                            <li className="link-items">Privacy Policy</li>
-
-                        </ul> */}
+                       
 
                     </div>
                     <div className="sec quickLinks">
-                        {/* <h2>Our suggestions</h2>
-                        <ul>
-                            <li className="link-items">Ladakh
-                            </li>
-                            <li className="link-items">Ladakh
-                            </li>
-                            <li className="link-items">Ladakh
-                            </li>
-                            <li className="link-items">Ladakh
-                            </li>
-                            <li className="link-items">Ladakh
-                            </li>
-                            <li className="link-items">Ladakh
-                            </li>
-                        </ul> */}
+                        
                         <h2>Quick Links</h2>
                         <ul>
-                            <li className="link-items">About Us</li>
-                            <li className="link-items">FAQ</li>
-                            <li className="link-items">Terms and Conditions</li>
-                            <li className="link-items">Privacy Policy</li>
+                            
+                            <Link to='/contact'className='contact-link'><li className="link-items">Contact Us</li></Link>
+                            <Link to='/'className='contact-link'><li className="link-items">FAQ</li></Link>
+                            <Link to='/'className='contact-link'><li className="link-items">Terms and Conditions</li></Link>
+                            <Link to='/'className='contact-link'><li className="link-items">Privacy Policy</li></Link>
 
                         </ul>s
                     </div>
-                    <div className="sec contact">
+                    <div className="sec contacts">
                         <h2>Contact Us</h2>
                         <ul className="info">
                             <li className='info-items'>

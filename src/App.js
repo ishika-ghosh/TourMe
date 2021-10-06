@@ -17,7 +17,7 @@ function App() {
           <Route path='/' exact component={Home} />
           <Route path='/map' component={Map} />
           <Route path='/getGuide' component={GetGuide} />
-          <Route path='/blogs' component={Blogs} />
+          <Route path='/contact' component={Blogs} />
       </Switch>
 
       {/* <Footer/> */}

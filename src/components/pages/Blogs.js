@@ -1,10 +1,11 @@
 import React from 'react'
+import Contact from '../common/Contact'
 
 function Blogs() {
     return (
-        <div>
-            <h1>Blogs</h1>
-        </div>
+        <>
+           <Contact/>
+        </>
     )
 }
 
