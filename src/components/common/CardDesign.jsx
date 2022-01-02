@@ -4,11 +4,11 @@ import LocationOnIcon from '@material-ui/icons/LocationOn';
 // import Places from './Places';
 function priceLevel(price) {
   if (typeof price !== "undefined") {
-    if (price == "$$ - $$$")
+    if (price === "$$ - $$$")
       return "Moderately expensive"
     else if (price.length >= 4)
       return "Very Expensive"
-    else if (price.length == 3)
+    else if (price.length === 3)
       return "Expensive"
     else if (price.length <= 2)
       return "Value for money"
