@@ -6,7 +6,7 @@ import Footer from "../common/Footer";
 
 function Home() {
     return (
-        <div className='home'>
+        <div className='home'style={{'maxWidth':'100vw'}}>
         <HeroSection/>
         <Crads/>
         <Footer/>

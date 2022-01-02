@@ -45,11 +45,11 @@ function Crads() {
                         </div>
                         <div className="card-content">
                             <h2>WHY CHOOSE US:
-</h2>
+                            </h2>
                             <p>*Budget Friendly Tour
-*Amazing Destinations
-*One-stop destination for all your needs.
-*Thriller Experience</p>
+                                *Amazing Destinations
+                                *One-stop destination for all your needs.
+                                *Thriller Experience</p>
                         </div>
                     </div>
                     <div className="card">

@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
-import { Button } from '@material-ui/core'
 import './Navbar.css'
 import logo from './logo.png'
 
@@ -33,7 +32,7 @@ function Navbar() {
                         <Link to='/getGuide' className='nav-links' onClick={HideMobileMenu}>Get Guide</Link>
                         </li>
                         <li className="nav-items">
-                            {/* <Link  className='nav-links' onClick={HideMobileMenu} onClick={window.open('https://am-here.github.io/blogs.github.io/','__blank')}>Blogs</Link> */}
+                            
                             <a href='https://am-here.github.io/blogs.github.io/' target='_blank' onClick={HideMobileMenu} className='nav-links'>Blogs</a>
                         </li>
                     </ul>

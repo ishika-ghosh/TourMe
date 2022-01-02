@@ -35,7 +35,7 @@ function Footer() {
                             <Link to='/'className='contact-link'><li className="link-items">Terms and Conditions</li></Link>
                             <Link to='/'className='contact-link'><li className="link-items">Privacy Policy</li></Link>
 
-                        </ul>s
+                        </ul>
                     </div>
                     <div className="sec contacts">
                         <h2>Contact Us</h2>

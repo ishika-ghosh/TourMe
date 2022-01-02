@@ -1,7 +1,7 @@
 import React, {useState,useEffect} from 'react'
 import ReactMapGL from 'react-map-gl'
-import {LocationOnOutlinedIcon} from '@material-ui/icons/LocalActivityOutlined'
-import { Paper, Typography, useMediaQuery } from '@material-ui/core';
+// import {LocationOnOutlinedIcon} from '@material-ui/icons/LocalActivityOutlined'
+import {useMediaQuery } from '@material-ui/core';
 import useStyles from './ourMapStyle';
 import { Marker } from 'react-map-gl';
 

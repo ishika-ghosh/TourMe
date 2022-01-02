@@ -28,8 +28,7 @@ export const travelFunc = async(type,viewport)=>{
           },
           headers: {
             'x-rapidapi-host': 'travel-advisor.p.rapidapi.com',
-            'x-rapidapi-key': '7b2ed8ccefmshdfe1237f6309f39p1bbd12jsnef121317aca8'
-            // 'x-rapidapi-key': '68197b1ce6msh6ce7056f6ff81b8p15f267jsn3e6a795b9c4a'
+            'x-rapidapi-key':process.env.REACT_APP_RAPID_API_KEY
           }
         });
         return data
