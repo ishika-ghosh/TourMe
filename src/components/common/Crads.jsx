@@ -26,7 +26,7 @@ function Crads() {
                 />
 
             </div>
-            <div className="body">
+            <div className="card-div">
                 <div className='Card-container'>
                     <div className="card">
                         <div className="imgbox">

@@ -4,8 +4,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Zilla+Slab&display=swap');
 
 .heading{
-    position: relative;
-    font-family: 'Zilla Slab', serif;
+  position: relative;
+  font-family: 'Zilla Slab', serif;
   font-weight:800;
   font-size:35px;
   text-align: center;
@@ -21,7 +21,8 @@
         font-size: 15px;
     }
 }
-.body{
+.card-div{
+    overflow: hidden;
     position: relative;
     display: flex;
     /* flex-direction: column; */
@@ -30,7 +31,7 @@
     background: white;
 
 }
-.body .Card-container{
+.card-div .Card-container{
     position: relative;
     width: 1500px;
     display: flex;
@@ -82,7 +83,7 @@
 @media screen and (max-width: 800px){
     .Card-container .card .imgbox{
 
-        left: 19px;
+        left: 1px;
     }
     
 }
