@@ -1,0 +1,29 @@
+.view-post{
+    padding: 20px;
+    overflow: hidden;
+    box-shadow: 5px 5px 20px 8px rgba(0, 0, 0, 0.386) ;
+    
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+.img-div{
+    margin-top: 10px;
+}
+.view-post>p{
+    color: rgba(36, 33, 33, 0.666);
+    margin: 8px 0px;
+}
+.img-div>img{
+    width: 100%;
+    display: block;
+    height: 350px;
+    border-radius: 10px;
+}
+.post-title{
+    font-size: 30px;
+    font-weight: 400;
+}
+.post-time{
+    font-size: 15px;
+    font-weight: 300;
+}

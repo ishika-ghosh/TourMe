@@ -13,7 +13,7 @@
   align-items: center;
   padding: 10px;
   
-  background: url("./pic1.jpeg") no-repeat center center fixed; 
+  background: url("../assets/pic1.jpeg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
