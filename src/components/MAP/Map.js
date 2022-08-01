@@ -9,9 +9,9 @@ function Map() {
   const [viewport, setViewport] = useState({
     longitude: 0,
     latitude: 0,
-    width: "63vw",
-    height: "85vh",
-    zoom: 8,
+    width: "100%",
+    height: "100%",
+    zoom: 12,
   });
   const [city, setCity] = useState("");
   const [type, setType] = useState("restaurants");
@@ -31,9 +31,9 @@ function Map() {
     setViewport({
       longitude: crd.longitude,
       latitude: crd.latitude,
-      width: "63vw",
-      height: "85vh",
-      zoom: 8,
+      width: "100%",
+      height: "100%",
+      zoom: 12,
     });
   }
   function error(err) {
@@ -45,16 +45,16 @@ function Map() {
         longitude: data[0].lon,
         latitude: data[0].lat,
         width: "100%",
-        height: "85vh",
-        zoom: 8,
+        height: "100%",
+        zoom: 12,
       });
     });
   }, [city]);
   useEffect(() => {
     setIsloading(true);
     travelFunc(type, viewport).then((data) => {
-      // console.log(data);
-      setplaces(data);
+      setplaces(data.data.data);
+      console.log(places);
       setIsloading(false);
     });
   }, [type, viewport]);
@@ -73,12 +73,8 @@ function Map() {
             isloading={isloading}
           />
         </Grid>
-        <Grid item xs={12} md={8}>
-          <OurMap
-            viewport={viewport}
-            setViewport={setViewport}
-            places={places}
-          />
+        <Grid item xs={12} md={8} style={{ paddingTop: "20px" }}>
+          <OurMap viewport={viewport} setViewport={setViewport} />
         </Grid>
       </Grid>
     </>
