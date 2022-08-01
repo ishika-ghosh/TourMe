@@ -1,9 +1,13 @@
 import React from "react";
 import { CircularProgress } from "@material-ui/core";
+import { Rating } from "@mui/material";
 import "./blogForm.css";
 
 const FormBlog = React.forwardRef(
-  ({ onSubmit, onChangeInput, Data, onFileSet, fileData, loading }, ref) => (
+  (
+    { onSubmit, onChangeInput, Data, onFileSet, fileData, loading, setData },
+    ref
+  ) => (
     <>
       <form method="POST" onSubmit={onSubmit} ref={ref}>
         <div className="mid-div">
@@ -38,6 +42,19 @@ const FormBlog = React.forwardRef(
             />
             <span>Type your message</span>
           </div>
+          <div className="rating" style={{ marginBottom: "20px" }}>
+            <Rating
+              value={Data.rating}
+              name="rating"
+              precision={0.5}
+              onChange={(_event, value) => {
+                const user = { ...Data };
+                user.rating = value;
+                setData((prev) => ({ ...prev, userData: user }));
+              }}
+            />
+          </div>
+
           {fileData.fileContent && (
             <img id="preview" src={fileData.fileContent} alt="no" />
           )}

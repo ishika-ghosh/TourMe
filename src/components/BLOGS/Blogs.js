@@ -6,6 +6,7 @@ import ViewPosts from "./ViewPosts";
 import ModalComp from "./Modal";
 import "./blogs.css";
 import ModalControl from "./modalControl";
+import { Modal } from "@material-ui/core";
 function Blogs() {
   const formRef = useRef(null);
   const [allState, setAllState] = useState({
@@ -21,6 +22,7 @@ function Blogs() {
       name: "",
       visitedPlace: "",
       experience: "",
+      rating: 0,
       image: "",
     },
   });
@@ -68,18 +70,6 @@ function Blogs() {
     allState.selectedImage && uploadImage();
   }, [allState.selectedImage]);
 
-  useEffect(() => {
-    setAllState((prev) => ({ ...prev, isloading: true }));
-    onSnapshot(collection(db, "users"), (snapshot) => {
-      var list = [];
-      snapshot.docs.forEach((doc) => {
-        list.push({ id: doc.id, ...doc.data() });
-      });
-      list.reverse();
-      setAllState((prev) => ({ ...prev, isloading: false, userList: list }));
-    });
-  }, []);
-
   //post the form to firebase
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -87,7 +77,7 @@ function Blogs() {
       ...allState.userData,
       timeStamp: new Date().toLocaleString(),
     }).then((res) => {
-      alert("data sent");
+      alert("Post sucessful");
       e.target.reset();
       setAllState((prev) => ({
         ...prev,
@@ -107,6 +97,22 @@ function Blogs() {
 
     setAllState((prev) => ({ ...prev, userData: user }));
   };
+  useEffect(() => {
+    setAllState((prev) => ({ ...prev, isloading: true }));
+    onSnapshot(collection(db, "users"), (snapshot) => {
+      var list = [];
+      snapshot.docs.forEach((doc) => {
+        list.push({ id: doc.id, ...doc.data() });
+      });
+      // list.reverse();
+      list.sort(
+        (a, b) =>
+          new Date(a.timeStamp).valueOf() - new Date(b.timeStamp).valueOf()
+      );
+      list.reverse();
+      setAllState((prev) => ({ ...prev, isloading: false, userList: list }));
+    });
+  }, []);
 
   return (
     <>
@@ -132,7 +138,9 @@ function Blogs() {
           </div>
           <div className="post-view">
             {allState.userList.map((user) => {
-              return <ViewPosts key={user.id} data={user} />;
+              return (
+                <ViewPosts key={user.id} data={user} modal={allState.Modal} />
+              );
             })}
           </div>
         </div>

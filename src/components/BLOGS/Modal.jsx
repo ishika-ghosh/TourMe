@@ -21,6 +21,7 @@ const ModalComp = React.forwardRef(
                   visitedPlace: "",
                   experience: "",
                   image: "",
+                  rating: 0,
                 },
                 fileData: {
                   fileName: "",
@@ -40,6 +41,7 @@ const ModalComp = React.forwardRef(
           onFileSet={setFile}
           loading={isloading}
           fileData={file}
+          setData={setdata}
         />
       </div>
     </div>
