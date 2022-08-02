@@ -7,27 +7,20 @@ export const getCity = async (city) => {
     "&appid=b8bd04883bfc1ee2e662b28a6e82f1f9";
 
   const { data } = await axios.get(link);
-  console.log(data);
+
   return data;
 };
 
-export const travelFunc = async (type, viewport) => {
+export const travelFunc = async (type, latitude, longitude) => {
   try {
     const {
       data: { data },
     } = await axios.get(
       `https://travel-advisor.p.rapidapi.com/${type}/list-by-latlng`,
       {
-        method: "GET",
         params: {
-          latitude: viewport.latitude,
-          longitude: viewport.longitude,
-          limit: "30",
-          currency: "USD",
-          distance: "2",
-          open_now: "false",
-          lunit: "km",
-          lang: "en_US",
+          latitude: latitude.toString(),
+          longitude: longitude.toString(),
         },
         headers: {
           "x-rapidapi-host": "travel-advisor.p.rapidapi.com",
@@ -35,7 +28,7 @@ export const travelFunc = async (type, viewport) => {
         },
       }
     );
-
+    console.log(data);
     return data;
   } catch (error) {
     console.log(error);

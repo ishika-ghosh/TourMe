@@ -10,8 +10,8 @@ export default function OurMap({ viewport, setViewport }) {
         {...viewport}
         mapboxApiAccessToken="pk.eyJ1IjoiLS1pc2hpa2EzMjEiLCJhIjoiY2t1NTZ4MGN1MWxyZTJ2bzFvZDRvdDNpOSJ9.9PfwICkdSRw_q6G8Rb3rOA"
         mapStyle="mapbox://styles/mapbox/streets-v11"
-        onViewportChange={(viewport) => {
-          setViewport({ ...viewport });
+        onViewportChange={(newviewport) => {
+          setViewport({ ...newviewport });
         }}
         // className={classes.paper}
         maxZoom={20}

@@ -16,48 +16,42 @@ function Map() {
   const [city, setCity] = useState("");
   const [type, setType] = useState("restaurants");
   const [isloading, setIsloading] = useState(false);
-  var options = {
-    enableHighAccuracy: true,
-    timeout: 5000,
-    maximumAge: 0,
-  };
 
   useEffect(() => {
-    navigator.geolocation.getCurrentPosition(success, error, options);
-  });
-  function success(pos) {
-    var crd = pos.coords;
-
-    setViewport({
-      longitude: crd.longitude,
-      latitude: crd.latitude,
-      width: "100%",
-      height: "100%",
-      zoom: 12,
-    });
-  }
-  function error(err) {
-    console.warn(`ERROR(${err.code}): ${err.message}`);
-  }
+    navigator.geolocation.getCurrentPosition(
+      function (position) {
+        console.log(position.coords);
+        setViewport((prev) => ({
+          ...prev,
+          latitude: position.coords.latitude,
+          longitude: position.coords.longitude,
+        }));
+      },
+      function (error) {
+        console.error("Error Code = " + error.code + " - " + error.message);
+      }
+    );
+  }, []);
   useEffect(() => {
     getCity(city).then((data) => {
-      setViewport({
-        longitude: data[0].lon,
-        latitude: data[0].lat,
-        width: "100%",
-        height: "100%",
-        zoom: 12,
-      });
+      setViewport((prev) => ({
+        ...prev,
+        latitude: data[0].lon,
+        longitude: data[0].lat,
+      }));
     });
   }, [city]);
   useEffect(() => {
     setIsloading(true);
-    travelFunc(type, viewport).then((data) => {
-      setplaces(data.data.data);
-      console.log(places);
-      setIsloading(false);
-    });
-  }, [type, viewport]);
+
+    if (viewport.latitude && viewport.longitude) {
+      travelFunc(type, viewport.latitude, viewport.longitude).then((data) => {
+        setplaces(data?.filter((place) => place.name && place.rating > 0));
+        console.log(places);
+        setIsloading(false);
+      });
+    }
+  }, [type, viewport.latitude, viewport.longitude]);
 
   return (
     <>

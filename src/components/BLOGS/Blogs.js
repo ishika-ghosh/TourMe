@@ -6,7 +6,7 @@ import ViewPosts from "./ViewPosts";
 import ModalComp from "./Modal";
 import "./blogs.css";
 import ModalControl from "./modalControl";
-import { Modal } from "@material-ui/core";
+
 function Blogs() {
   const formRef = useRef(null);
   const [allState, setAllState] = useState({
