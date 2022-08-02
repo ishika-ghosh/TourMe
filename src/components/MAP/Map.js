@@ -36,8 +36,8 @@ function Map() {
     getCity(city).then((data) => {
       setViewport((prev) => ({
         ...prev,
-        latitude: data[0].lon,
-        longitude: data[0].lat,
+        latitude: data[0].lat,
+        longitude: data[0].lon,
       }));
     });
   }, [city]);
