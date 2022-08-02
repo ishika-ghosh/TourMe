@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import ReactMapGL from "react-map-gl";
 import useStyles from "./ourMapStyle";
 

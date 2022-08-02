@@ -27,7 +27,7 @@ function ViewPosts({ data, modal }) {
         {data.name}
       </h4>
       <div className="img-div">
-        <img src={data.image} className="post-img" />
+        <img src={data.image} className="post-img" alt="no" />
       </div>
     </div>
   );
