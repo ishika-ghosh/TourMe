@@ -28,7 +28,7 @@ export const travelFunc = async (type, latitude, longitude) => {
         },
       }
     );
-    console.log(data);
+
     return data;
   } catch (error) {
     console.log(error);
